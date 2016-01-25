@@ -13,7 +13,7 @@ var LinearGradient = React.createClass({
   },
 
   render: function() {
-    var {style, children, colors, locations, start, end, ...otherProps} = this.props;
+    var {style, children, colors, locations, start, _end, ...otherProps} = this.props;
 
     // inherit container borderRadius until this issue is resolved:
     // https://github.com/facebook/react-native/issues/3198
@@ -33,7 +33,7 @@ var LinearGradient = React.createClass({
           style={{position: 'absolute', top: 0, left: 0, bottom: 0, right: 0}}
           colors={colors.map(processColor)}
           start={start}
-          end={end}
+          end={_end}
           locations={locations}
           borderRadius={borderRadius}
         />
